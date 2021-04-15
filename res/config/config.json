@@ -1,0 +1,14 @@
+{
+  "debug": true,
+  "type": "vue",
+  "common": ["./res/regexp/common/vue.reg"],
+  "single": ["./res/regexp/single/vue.reg"],
+  "watchDir": [
+    "/home/jiuker/goworkspace/src/hdb/appkeeper/res/vue-element-admin"
+  ],
+  "reg": ["class=\"([^\"]+)\""],
+  "outUnit": "px",
+  "zoom": 1,
+  "needZoomUnit": "px|rem|upx",
+  "oldCssReg": "/\\* Automatic generation Start \\*/([^/]+)/\\*"
+}
