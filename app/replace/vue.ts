@@ -30,8 +30,8 @@ export class VueReplace implements Replace{
         return result
     }
     Zoom(css: string): string {
-        let needZoomUnit= Cfg.GetInstance().needZoomUnit
-        css = css.replace(new RegExp('([0-9|\.]{1,10}[ |	]{0,3}('+needZoomUnit+'){1,5})','g'),(data)=>{
+        let needZoomUnit = Cfg.GetInstance().needZoomUnit
+        css = css.replace(new RegExp('([0-9|\.]{1,10}[ |	]{0,3}(' + needZoomUnit + '){1,5})', 'g'), (data) => {
             return parseFloat(data.replace(new RegExp(needZoomUnit),'')) * Cfg.GetInstance().zoom+Cfg.GetInstance().outUnit
         })
         return css
@@ -84,7 +84,7 @@ export class VueReplace implements Replace{
             allSet.add(item)
         })
         allSet.forEach(item=>{
-            resultCss.push(item as string)
+            resultCss.push('.'+item as string)
         })
         return resultCss
     }

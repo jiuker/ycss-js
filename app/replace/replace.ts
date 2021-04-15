@@ -29,11 +29,11 @@ export function HandleChange(path:string,typ:HandleFileTye){
             return
         }
         let classCss = replace.FindClass()
-        Log("classCss:",...classCss)
+        Log("FindClass:",...classCss)
         let regexpCss = replace.GetRegexpCss(classCss)
-        Log("regexpCss:",regexpCss)
+        Log("GetRegexpCss:",regexpCss)
         let zoomCss = replace.Zoom(regexpCss)
-        Log("zoomCss:",zoomCss)
+        Log("Zoom:",zoomCss)
         let [pos,old] = replace.GetOldCss()
         Log("pos:",pos)
         Log("old:",old)
